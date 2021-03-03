@@ -1,2 +1,2 @@
 # CustomCards
-Edopro Repository for my custom cards
+Edopro Repository for custom cards
