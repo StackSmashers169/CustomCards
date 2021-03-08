@@ -4,8 +4,8 @@
 local s,id=GetID()
 function s.initial_effect(c)
 	local e1=Effect.CreateEffect(c)
-	e1:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_CONTINOUS)
-	e1:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
+	e1:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_CONTINUOUS)
+	e1:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)https://github.com/StackSmashers169/CustomCards/blob/main/script/c124509323.lua
     	e1:SetCode(EVENT_SUMMON_SUCCESS)
 	e1:SetOperation(s.regop)
     	c:RegisterEffect(e1)
