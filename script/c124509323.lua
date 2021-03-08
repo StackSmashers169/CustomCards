@@ -29,6 +29,6 @@ function s.spop(e,tp,eg,ep,ev,re,r,rp)
 	if Duel.GetLocationCount(tp,LOCATION_MZONE)>0
 		and Duel.IsPlayerCanSpecialSummonMonster(tp,511009746,0x581,TYPES_TOKEN,0,0,1,RACE_MACHINE,ATTRIBUTE_WIND) then
 			local token=Duel.CreateToken(tp,511009746)
-			Duel.SpecialSummonStep(token,0,tp,tp,false,false,POS_FACEUP)
+			Duel.SpecialSummon(token,0,tp,tp,false,false,POS_FACEUP)
 	end
 end
