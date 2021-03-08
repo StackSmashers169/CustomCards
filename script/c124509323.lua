@@ -16,7 +16,7 @@ function s.initial_effect(c)
 	c:RegisterEffect(e1)
 end
 function s.spcon(e,tp,eg,ep,ev,re,r,rp)
-	return e:GetHandler():IsLocation(LOCATION_GRAVE) and IsSummonType(SUMMON_TYPE_NORMAL) and r==REASON_LINK
+	return e:GetHandler():IsLocation(LOCATION_GRAVE) and e:GetHandler():IsSummonType(SUMMON_TYPE_NORMAL) and r==REASON_LINK
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>0
