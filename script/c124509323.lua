@@ -19,6 +19,7 @@ function s.initial_effect(c)
 	e2:SetTarget(s.sptg)
 	e2:SetOperation(s.spop)
 	c:RegisterEffect(e2)
+end
 function s.ssuccess(e,tp,eg,ep,ev,re,r,rp)
 	e:GetHandler():RegisterFlagEffect(id,RESET_EVENT+RESETS_STANDARD_RESET_TURN_SET+RESET_PHASE+PHASE_END,0,1)
 end
