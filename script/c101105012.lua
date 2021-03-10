@@ -54,16 +54,19 @@ end
 function s.excop(e,tp,eg,ep,ev,re,r,rp)
 	if Duel.GetFieldGroupCount(tp,LOCATION_DECK,0)<3 then return end
 	Duel.ConfirmDecktop(tp,3)
-	local g=Duel.GetDecktopGroup(tp,3)
-	if g:IsExists(s.thfilter,1,nil) and Duel.SelectYesNo(tp,aux.Stringid(id,2)) then
-		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_ATOHAND) 
-		if #g>0 then
-			tc=g:GetFirst()
-			aux.ToHandOrElse(tc,tp,function(c)
+	local g=Duel.GetDecktopGroup(tp,3):Filter(s.excfilter,nil,e,tp)
+	local ct=0
+	if #g>0 and Duel.SelectYesNo(tp,aux.Stringid(id,2)) then
+		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_ATOHAND)
+		local sg=g:Select(tp,1,1,nil)
+		aux.ToHandOrElse(tc,tp,function(c)
 				return tc:IsCanBeSpecialSummoned(e,0,tp,false,false) and Duel.GetLocationCount(tp,LOCATION_MZONE)>0 end,
 				function(c)
 				Duel.SpecialSummon(tc,0,tp,tp,false,false,POS_FACEUP) end,
 				aux.Stringid(id,2))
 		end
 	end
+end
+
+			
 end
