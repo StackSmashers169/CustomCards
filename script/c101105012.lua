@@ -1,7 +1,7 @@
 --Roe Suships
 --coded by V.J.Wilson
 
-local s,id=GetID
+local s,id=GetID()
 function s.initial_effect(c)
 	--special summon
 	local e1=Effect.CreateEffect(c)
