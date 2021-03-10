@@ -26,8 +26,6 @@ function s.initial_effect(c)
 	c:RegisterEffect(e2)
 end
 s.listedNames={101105011}
-
-
 function s.cfilter(c)
 	return c:IsFaceup() and c:IsCode(101105011)
 end
@@ -50,7 +48,7 @@ function s.exctg(e,tp,eg,ep,ev,re,r,rp,chk)
 	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,nil,1,tp,LOCATION_DECK)
 end
 function s.excfilter(c,e,tp,zone)
-	return c:IsCode(CARD_RICE_SUSHIP) 
+	return c:IsCode(101105011) 
 		and (c:IsAbleToHand() or c:IsCanBeSpecialSummoned(e,0,tp,false,false))
 end
 function s.excop(e,tp,eg,ep,ev,re,r,rp)
