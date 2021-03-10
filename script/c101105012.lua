@@ -58,6 +58,7 @@ function s.excop(e,tp,eg,ep,ev,re,r,rp)
 	
 	if #g>0 and Duel.SelectYesNo(tp,aux.Stringid(id,2)) then
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_ATOHAND)
+		Duel.Hint(HINT_SELECTMSG,tp,HINT_SPSUMMON)
 		local sg=g:Select(tp,1,1,nil)
 		local tc=sg:GetFirst()
 		aux.ToHandOrElse(tc,tp,function(c)
