@@ -25,7 +25,7 @@ function s.initial_effect(c)
 	e2:SetOperation(s.excop)
 	c:RegisterEffect(e2)
 end
-s.listedNames{101105011}
+s.listedNames={101105011}
 
 
 function s.cfilter(c)
