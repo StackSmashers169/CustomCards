@@ -29,7 +29,7 @@ s.listedNames={101105011}
 
 
 function s.cfilter(c)
-	return c:IsFaceup() and c:IsCode(CARD_RICE_SUSHIP)
+	return c:IsFaceup() and c:IsCode(101105011)
 end
 function s.spcon(e,tp,eg,ep,ev,re,r,rp)
 	return Duel.IsExistingMatchingCard(s.cfilter,tp,LOCATION_MZONE,0,1,nil)
