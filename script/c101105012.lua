@@ -60,9 +60,9 @@ function s.excop(e,tp,eg,ep,ev,re,r,rp)
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_ATOHAND)
 		local sg=g:Select(tp,1,1,nil)
 		aux.ToHandOrElse(sg,tp,function(c)
-				return tc:IsCanBeSpecialSummoned(e,0,tp,false,false) and Duel.GetLocationCount(tp,LOCATION_MZONE)>0 end,
+				return sg:IsCanBeSpecialSummoned(e,0,tp,false,false) and Duel.GetLocationCount(tp,LOCATION_MZONE)>0 end,
 				function(c)
-				Duel.SpecialSummon(tc,0,tp,tp,false,false,POS_FACEUP) end,
+				Duel.SpecialSummon(sg,0,tp,tp,false,false,POS_FACEUP) end,
 				aux.Stringid(id,2))
 	end
 end
